@@ -2,4 +2,10 @@ import makeStore from './src/store';
 import startServer from './src/server';
 
 export const store = makeStore();
-startServer(); // server starts when app starts
+startServer(store); // server starts when app starts
+
+store.dispatch({
+  type: 'SET_ENTRIES',
+  entries: require('./entries.json')
+});
+store.dispatch({type: 'NEXT'});
