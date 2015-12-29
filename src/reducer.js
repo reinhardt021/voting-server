@@ -14,18 +14,18 @@ export default function reducer(state = INITIAL_STATE, action) {
   return state; // Note that if the reducer doesn't recognize the action, it just returns the current state
 }
 
-// An important additional requirement of reducers is that if they are called with an undefined state, 
-// they know how to initialize it to a meaningful value. 
-// In our case, the initial value is a Map. 
-// So, giving an undefined state should work as if an empty Map had been given
+// An important additional requirement of reducers is
+  // that if they are called with an undefined state, 
+  // they know how to initialize it to a meaningful value. 
+  // In our case, the initial value is a Map. 
+  // So, giving an undefined state should work as if an empty Map had been given
 
 // What is interesting about the way this reducer works is 
 // how it can be generically used to take the application 
 // from one state to the next, given any type of action
 
 // Actually, given a collection of past actions, 
-// you can actually just reduce that collection into the current state
-
+  // you can actually just reduce that collection into the current state
 // That's why the function is called a reducer: 
 // It fulfills the contract of a reduce callback function
 
