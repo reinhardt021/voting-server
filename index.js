@@ -9,3 +9,4 @@ store.dispatch({
   entries: require('./entries.json')
 });
 store.dispatch({type: 'NEXT'});
+
